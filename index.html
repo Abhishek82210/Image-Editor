@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="editor">
+        <h1>Image Editor</h1>
+        <input type="file" id="upload" accept="image/*">
+        <canvas id="canvas"></canvas>
+
+        <div class="controls">
+            <button onclick="applyEffect('brightness')">Brightness</button>
+            <button onclick="applyEffect('saturation')">Saturation</button>
+            <button onclick="applyEffect('greyscale')">Greyscale</button>
+            <button onclick="applyEffect('invert')">Invert</button>
+            <button onclick="applyEffect('rotate')">Rotate</button>
+            <button onclick="applyEffect('flip')">Flip</button>
+        </div>
+
+        <div class="sliders">
+            <input type="range" id="effect-slider" min="0" max="200" value="100">
+        </div>
+
+        <button onclick="downloadImage()">Download</button> <!-- Download button -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
